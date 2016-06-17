@@ -1,13 +1,13 @@
 class Room
 
-  attr_reader(:songs)
+  attr_reader(:guests, :songs)
 
   def initialize(guests, songs)
     @guests = guests
     @songs = songs
   end
 
-  def add_song_into_room(song)
+  def add_song_to_room(song)
     return @songs << song
   end
 
@@ -15,4 +15,12 @@ class Room
     return @songs.length
   end
 
+  def add_guest_to_room(guest)
+    return @guests << guest
+  end
+
+  def number_of_guests
+    return @guests.length
+  end
+ 
 end
